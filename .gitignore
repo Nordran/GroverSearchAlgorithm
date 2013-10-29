@@ -1,6 +1,13 @@
-#Target folder
+# Target folder
 target/
 
-#Project folder and files
+# Project folder and files
 .idea/
 *.iml
+# Class Files
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
