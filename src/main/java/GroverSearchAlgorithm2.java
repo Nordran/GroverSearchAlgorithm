@@ -6,7 +6,8 @@ public class GroverSearchAlgorithm2 {
         final int n = 3;
         final int N = (int)Math.round(Math.pow(2, n));
         // Target index
-        final int x0 = 3;
+        final int x0 = 5;
+        System.out.println("Desired x: " + x0);
         Register register = Register.ZERO;
         for(int i = 2; i <= n + 1; i++) {
             register = register.multiply(Register.ZERO);
@@ -37,11 +38,8 @@ public class GroverSearchAlgorithm2 {
             register = multiply.apply(register);
             System.out.println(register);
         }
-        double S = 0;
-        for(int i = 0; i < register.amplitudes.length; i++) {
-            S += Math.pow(register.amplitudes[i], 2);
-        }
-        System.out.println(S);
+        //
+        System.out.println("Result: " + register.measure2(new int[]{1, 2, 3}));
     }
     public static Operator dispersion(int size) {
         double[][] matrix = new double[size][];
